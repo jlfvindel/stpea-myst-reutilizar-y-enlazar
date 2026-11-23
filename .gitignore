@@ -1,0 +1,4 @@
+_build/
+exports/
+descargas/*.zip
+.DS_Store

@@ -1,0 +1,24 @@
+# -------------------------------------------------------------
+#  myst-alumnado.yml · Proyecto 3, edición para el alumnado
+#  Se usa con:  myst --config myst-alumnado.yml start
+#  PDF:         myst --config myst-alumnado.yml build --pdf   (con LaTeX)
+#
+#  Solo las presentaciones y los anexos, sin la guía.
+#  Los dos índices son externos y distintos:
+#    - el del sitio web viene de tocs/alumnado.yml (extends)
+#    - el del PDF viene de tocs/libro/_toc.yml (exports → toc)
+# -------------------------------------------------------------
+version: 1
+extends:
+  - config/comun.yml
+  - tocs/alumnado.yml
+
+project:
+  title: El tiro parabólico
+
+  exports:
+    - id: libro
+      format: pdf                      # con LaTeX (ver guía: Configuraciones)
+      template: plain_latex_book
+      toc: tocs/libro/_toc.yml
+      output: exports/tiro-parabolico.pdf

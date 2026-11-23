@@ -1,0 +1,41 @@
+# -------------------------------------------------------------
+#  myst.yml · Proyecto 3, guía completa para el autor
+#  Se usa con:  myst start
+#  Hereda lo común (autoría, bibliografía, numeración…) de
+#  config/comun.yml y define aquí su propio índice.
+# -------------------------------------------------------------
+version: 1
+extends: config/comun.yml
+
+project:
+  title: 'Proyecto 3: reutilizar y enlazar'
+
+  toc:
+    - file: index.md
+
+    - title: Guía
+      children:
+        - file: guia/repositorio.md
+        - file: guia/reutilizar.md
+        - file: guia/demostraciones.md
+        - file: guia/glosario-indice-bibliografia.md
+        - file: guia/configuraciones.md
+
+    - title: Presentaciones
+      children:
+        - file: presentaciones/tema.md
+        - file: presentaciones/repaso.md
+
+    - title: Anexos
+      children:
+        - file: anexos/resultados.md   # repositorio visible: se numera
+        - file: anexos/indice.md
+
+    # Repositorio oculto: se procesa, se cita y se incrusta,
+    # pero no sale en el menú ni se numera.
+    - file: repositorio/conceptos.md
+      hidden: true
+    - file: repositorio/figuras.md
+      hidden: true
+    - file: repositorio/glosario.md
+      hidden: true

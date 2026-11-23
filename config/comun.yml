@@ -1,0 +1,42 @@
+# -------------------------------------------------------------
+#  config/comun.yml · Configuración compartida
+#  No se usa sola: la heredan (extends) los tres ficheros
+#  myst*.yml de la carpeta principal.
+# -------------------------------------------------------------
+version: 1
+
+project:
+  authors:
+    - name: José Luis Fernández Vindel
+  license: CC-BY-4.0
+
+  downloads:
+    - file: descargas/reutilizar-y-enlazar.zip
+      title: Fuente del proyecto (zip)
+
+  # La bibliografía: MyST encuentra también los .bib por sí solo,
+  # pero declararlo deja claro de dónde salen las citas.
+  bibliography:
+    - referencias.bib
+
+  # Texto de las citas automáticas, en español.
+  numbering:
+    figure:
+      template: figura %s
+    table:
+      template: tabla %s
+    code:
+      template: programa %s
+    proof:definition:
+      template: definición %s
+    proof:proposition:
+      template: proposición %s
+    proof:corollary:
+      template: corolario %s
+    proof:example:
+      template: ejemplo %s
+    exercise:
+      template: ejercicio %s
+
+site:
+  template: book-theme

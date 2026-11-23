@@ -1,0 +1,20 @@
+# -------------------------------------------------------------
+#  tocs/libro/_toc.yml · Índice del PDF de la edición para el alumnado
+#  Formato heredado de Jupyter Book 1 («jb-book»), el que admite
+#  una exportación cuando su índice está en un fichero aparte.
+#  Las rutas son relativas a ESTA carpeta y van sin extensión.
+#
+#  - root: en un PDF, la página raíz no se convierte en capítulo;
+#    aquí se usa el índice alfabético, que no hace falta imprimir.
+#  - A diferencia de la web, el PDF incluye el repositorio como
+#    capítulos finales: en papel no hay ventanas emergentes, y
+#    todo lo que se cita tiene que estar dentro del documento.
+# -------------------------------------------------------------
+format: jb-book
+root: ../../anexos/indice
+chapters:
+  - file: ../../presentaciones/tema
+  - file: ../../presentaciones/repaso
+  - file: ../../anexos/resultados
+  - file: ../../repositorio/conceptos
+  - file: ../../repositorio/figuras

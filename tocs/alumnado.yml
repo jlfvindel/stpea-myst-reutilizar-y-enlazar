@@ -1,0 +1,19 @@
+# -------------------------------------------------------------
+#  tocs/alumnado.yml · Índice de la edición para el alumnado
+#  Lo usa myst-alumnado.yml mediante extends.
+#  Las rutas son relativas a la carpeta del proyecto.
+# -------------------------------------------------------------
+version: 1
+
+project:
+  toc:
+    - file: presentaciones/tema.md     # la primera entrada es la portada
+    - file: presentaciones/repaso.md
+    - file: anexos/resultados.md
+    - file: anexos/indice.md
+    - file: repositorio/conceptos.md
+      hidden: true
+    - file: repositorio/figuras.md
+      hidden: true
+    - file: repositorio/glosario.md
+      hidden: true

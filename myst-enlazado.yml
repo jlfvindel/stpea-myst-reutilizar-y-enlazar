@@ -1,0 +1,44 @@
+# -------------------------------------------------------------
+#  myst-enlazado.yml · Proyecto 3, guía con referencias externas
+#  Se usa con:  myst --config myst-enlazado.yml start
+#  Necesita conexión a internet al construir: MyST descarga el
+#  catálogo de etiquetas de los proyectos declarados en references.
+#
+#  Hereda TODO myst.yml y añade dos cosas:
+#    - references: proyectos MyST externos y estables que se citan
+#    - un índice con una página más; el índice no se combina al
+#      heredar (sustituye al heredado), así que se repite entero
+# -------------------------------------------------------------
+version: 1
+extends: myst.yml
+
+project:
+  title: 'Proyecto 3: reutilizar y enlazar (con referencias externas)'
+
+  references:
+    spec: https://mystmd.org/spec      # la especificación de MyST
+
+  toc:
+    - file: index.md
+    - title: Guía
+      children:
+        - file: guia/repositorio.md
+        - file: guia/reutilizar.md
+        - file: guia/demostraciones.md
+        - file: guia/glosario-indice-bibliografia.md
+        - file: guia/configuraciones.md
+        - file: guia/enlazar-proyectos.md    # solo en esta edición
+    - title: Presentaciones
+      children:
+        - file: presentaciones/tema.md
+        - file: presentaciones/repaso.md
+    - title: Anexos
+      children:
+        - file: anexos/resultados.md
+        - file: anexos/indice.md
+    - file: repositorio/conceptos.md
+      hidden: true
+    - file: repositorio/figuras.md
+      hidden: true
+    - file: repositorio/glosario.md
+      hidden: true
